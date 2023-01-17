@@ -6,10 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      transitionDelay: {
-        '500': '500ms',
-        '1000': '1000ms',
-       }
+      fontFamily: {
+        poppins: "Poppins",
+      }
     },
   },
   plugins: [],
