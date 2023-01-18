@@ -2,13 +2,11 @@ import React from "react";
 import Navbar from "./Navbar";
 const Layout = ({ children }) => {
   return (
-    <>
-    <Navbar />
-      <div >
-        <main>{children}</main>
-      </div>
-    </>
-  )
+    <div className="font-poppins">
+      <Navbar />
+      <main>{children}</main>
+    </div>
+  );
 };
 
 export default Layout;
