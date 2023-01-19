@@ -1,15 +1,14 @@
-import { toast } from 'react-toastify'
+import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 
 
 const options = {
     autoClose: 2000,
-    className: '',
     position: toast.BOTTOM_CENTER,
   };
 
-  export const toastSuccess = message => {
+  export const toastSuccess = (message) => {
     console.log("Hello0 success toast")
     toast.success(message, options);
   }

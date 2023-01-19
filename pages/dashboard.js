@@ -6,13 +6,17 @@ import { useEffect } from "react";
 import Router, { useRouter } from "next/router";
 import img from "../assets/img-1.png";
 import Image from "next/image";
-import { userAgent } from "next/server";
+import { toast, ToastContainer } from 'react-toastify'
+import { toastSuccess } from "../utils/toastify";
+
 
 const Dashboard = () => {
   const [user, loading] = useAuthState(auth);
 
   console.log(loading);
   const router = useRouter();
+  toast.success('You Are Loged In!', {position: toast.POSITION.TOP_CENTER, autoClose: 3000})
+  // toastSuccess('YOU ARE IN HERE')
 
   useEffect(() => {
     if (loading) {
@@ -78,11 +82,8 @@ const Dashboard = () => {
           </div>
         </div>
       )}
-      {/* {!user && (
-        <div>
-          <Link href="/auth/login">Go to login</Link>
-        </div>
-      )} */}
+      <ToastContainer />
+
     </>
   );
 };
