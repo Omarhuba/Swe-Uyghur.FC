@@ -24,10 +24,12 @@ const Login = () => {
       const result = await signInWithPopup(auth, googleProvider);
       router.push("/dashboard");
 
+
     } catch (error) {
       console.log(error);
     }
   };
+
 
   return (
     <div className="shadow-xl mt-32 p-10 text-gray-700">
@@ -42,6 +44,7 @@ const Login = () => {
           Sign in with Google
         </button>
       </div>
+
     </div>
   );
 };
