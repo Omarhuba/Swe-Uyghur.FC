@@ -2,10 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components {
+  .card {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    padding: theme('spacing.6');
+    box-shadow: theme('boxShadow.xl');
+  }
+  /* ... */
+}
+
  :root {
   --max-width: 1100px;
   --border-radius: 12px;
- 
+
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
