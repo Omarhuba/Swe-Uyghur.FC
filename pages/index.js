@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
+import Link from 'next/link'
+import { BsPlayCircle } from "react-icons/bs";
+
 
 
 export default function Home() {
@@ -13,7 +16,41 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-
+      <div>
+      <div className=" flex justify-center ">
+        {/* <video src='/videos/video-1.mp4' autoPlay muted loop/> */}
+        <video
+          className="object-cover w-full min-h-screen relative z-0"
+          src="/videos/football.mp4"
+          autoPlay
+          muted
+          loop
+        />
+        <div className=" absolute flex flex-col justify-center items-center mt-96">
+          <h1 className="text-8xl text-white font-poppins font-bold">
+            Swe-Uyghur .FC
+          </h1>
+          <p className="text-4xl p-8 text-white font-poppins ">
+            What Are You Waiting For?
+          </p>
+          <div className="flex ">
+            <Link
+              href="/auth/login"
+              className="border-solid border-4 border-white text-2xl p-2 mr-3 text-white hover:text-black hover:bg-white"
+            >
+              GET STARTED
+            </Link>
+            <Link
+              href="/album"
+              className="flex items-center border-solid border-2 border-white text-2xl py-2 px-10 ml-3 bg-white hover:bg-none"
+            >
+              VIDEOS <BsPlayCircle className="ml-3" />
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="min-h-screen bg-red-600 z-40"></div>
+    </div>
       </main>
     </>
   )
