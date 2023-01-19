@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import { toastSuccess, toastError } from "../../utils/toastify";
 import { useAuthState } from "react-firebase-hooks/auth";
 
+
 const Login = () => {
 
   // react-firebase-hooks
@@ -22,10 +23,13 @@ const Login = () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
       router.push("/dashboard");
+
+
     } catch (error) {
       console.log(error);
     }
   };
+
 
   return (
     <div className="shadow-xl mt-32 p-10 text-gray-700">
@@ -40,7 +44,7 @@ const Login = () => {
           Sign in with Google
         </button>
       </div>
-      {/* <button onClick={onClick}> Click Me</button> */}
+
     </div>
   );
 };

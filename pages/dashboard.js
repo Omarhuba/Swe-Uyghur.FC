@@ -6,13 +6,18 @@ import { useEffect } from "react";
 import Router, { useRouter } from "next/router";
 import img from "../assets/img-1.png";
 import Image from "next/image";
-import { userAgent } from "next/server";
+
+import { toast, ToastContainer } from 'react-toastify'
+
 
 const Dashboard = () => {
   const [user, loading] = useAuthState(auth);
 
   console.log(loading);
   const router = useRouter();
+
+  toast.success('You Are Loged In!', {position: toast.POSITION.TOP_CENTER, autoClose: 3000})
+
 
   useEffect(() => {
     if (loading) {
@@ -78,22 +83,14 @@ const Dashboard = () => {
           </div>
         </div>
       )}
-      {/* {!user && (
-        <div>
-          <Link href="/auth/login">Go to login</Link>
-        </div>
-      )} */}
+
+      <ToastContainer />
+
+
     </>
   );
 };
 
 export default Dashboard;
 
-// <div className="flex justify-center items-center p-30 ">
-//   <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-//     <h1 >Your Dashboard</h1>
-//     <h3>your name</h3>
-//     <h4>your email</h4>
-//     <button onClick={() => auth.signOut()}>Logout</button>
-//   </div>
-// </div>
+
