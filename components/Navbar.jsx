@@ -4,13 +4,13 @@ import { SiTypo3 } from "react-icons/si";
 import { auth } from "../utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useState } from "react";
-import img from "../assets/img-1.png";
+// import img from "../assets/child.png";
 
 const Navbar = () => {
   const [user, loading] = useAuthState(auth);
   console.log(user);
   return (
-    <nav className="flex justify-between bg-slate-600">
+    <nav className="flex justify-between bg-slate-600 w-full fixed top-0 z-50">
       <Link href={"/"}>
         <h2 className="flex  items-center text-2xl text-white p-4">
           Swe-UG
