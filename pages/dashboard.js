@@ -4,7 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Link from "next/link";
 import { useEffect } from "react";
 import Router, { useRouter } from "next/router";
-import img from "../assets/img-1.png";
+// import img from "../assets/img-1.png";
 import Image from "next/image";
 
 import { toast, ToastContainer } from 'react-toastify'

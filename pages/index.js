@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import Link from 'next/link'
 import { BsPlayCircle } from "react-icons/bs";
+import  Showcase  from '../components/page/ShowCase';
 
 
 
@@ -49,7 +50,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="min-h-screen bg-red-600 z-40"></div>
+      <div className="min-h-screen bg-red-600 z-40">
+        <h1>hellowwwww</h1>
+      </div>
+      <Showcase />
     </div>
       </main>
     </>
