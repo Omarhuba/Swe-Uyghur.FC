@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import Link from 'next/link'
 import { BsPlayCircle } from "react-icons/bs";
-import  Showcase  from '../components/page/ShowCase';
+import ShowcaseItem from '../components/showcase/ShowcaseItem';
 
 
 
@@ -50,10 +49,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <ShowcaseItem  />
       <div className="min-h-screen bg-red-600 z-40">
         <h1>hellowwwww</h1>
       </div>
-      <Showcase />
     </div>
       </main>
     </>

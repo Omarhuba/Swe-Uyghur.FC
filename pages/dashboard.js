@@ -4,11 +4,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Link from "next/link";
 import { useEffect } from "react";
 import Router, { useRouter } from "next/router";
-// import img from "../assets/img-1.png";
-import Image from "next/image";
 
-import { toast, ToastContainer } from 'react-toastify'
-
+import { toast } from "react-toastify";
 
 const Dashboard = () => {
   const [user, loading] = useAuthState(auth);
@@ -16,7 +13,6 @@ const Dashboard = () => {
   console.log(loading);
   const router = useRouter();
 
-  toast.success('You Are Loged In!', {position: toast.POSITION.TOP_CENTER, autoClose: 3000})
 
 
   useEffect(() => {
@@ -43,8 +39,16 @@ const Dashboard = () => {
   //   getData();
   // },[user, loading])
 
+
+  if (user) {
+    toast.success("You Are Loged In!", {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 2000,
+    });
+  }
   return (
     <>
+
       {user && (
         <div className="flex justify-center p-20">
           <div className="w-full max-w-lg h-100 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
@@ -83,14 +87,8 @@ const Dashboard = () => {
           </div>
         </div>
       )}
-
-      <ToastContainer />
-
-
     </>
   );
 };
 
 export default Dashboard;
-
-
