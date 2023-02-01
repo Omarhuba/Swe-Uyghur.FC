@@ -5,8 +5,8 @@ import { FcGoogle } from "react-icons/fc";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../../utils/firebase";
 import { useRouter } from "next/router";
-import { toastSuccess, toastError } from "../../utils/toastify";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { toast } from "react-toastify";
 
 
 const Login = () => {
@@ -15,6 +15,16 @@ const Login = () => {
   const [user, loading] = useAuthState(auth)
   console.log(user)
   const router = useRouter();
+
+
+
+
+  if (!user) {
+    toast.info("You Are Loged Out!!!", {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 2000,
+    });
+  }
   // const onClick = () => toast('Toast is good', { hideProgressBar: true, autoClose: 3000, type: 'success' })
 
   // * Sign Google providfer

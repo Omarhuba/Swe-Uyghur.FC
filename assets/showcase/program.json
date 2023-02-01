@@ -1,0 +1,146 @@
+[
+  {
+    "id": "1",
+    "name": "Pelé",
+    "img_name": "pele",
+    "nations": "Brasilien",
+    "clubs": "Santos, New York Cosmos",
+    "description": "Pelé, egentligen Edson Arantes do Nascimento, född 23 oktober 1940 i Três Corações i Minas Gerais, död 29 december 2022 i São Paulo,[1][2] var en brasiliansk fotbollsspelare. Han spelade i Brasiliens landslag 1957–1971 och bidrog starkt till att laget vann VM-guld 1958 och 1970. Pelé anses allmänt som en av världens bästa fotbollsspelare genom tiderna[3][4][5][6] och är en av världens mest kända idrottsmän. Han var en av de två gemensamma vinnarna av FIFA Århundradets spelare.[8] Hans 1 279 mål på 1 363 matcher, inklusive vänskapsmatcher. ",
+    "ballon_dor": "0",
+    "vm_champions": "3",
+    "champins_league": "0"
+  },
+  {
+    "id": "2",
+    "name": "Diego Maradona",
+    "img_name": "maradona",
+    "nations": "Argentina",
+    "clubs": " Boca Juniors, Barcelona, Napoli",
+    "description": "Diego Armando Maradona, född 30 oktober 1960, död 25 november 2020, var en argentinsk fotbollsspelare och tränare. Maradona anses som en av de bästa fotbollsspelarna genom tiderna och av vissa som den allra bästa.[2] När det internationella fotbollsförbundet Fifa anordnade en webbaserad omröstning år 2000 med världens fotbollsfans om vem som har varit 1900-talets bästa fotbollsspelare så blev Maradona placerad på förstaplatsen.",
+    "ballon_dor": "0",
+    "vm_champions": "1",
+    "champins_league": "0"
+  },
+  {
+    "id": "3",
+    "name": "Ronaldo",
+    "img_name": "ronaldo",
+    "nations": "Brasilien",
+    "clubs": " FC Barcelona, Inter, Real Madrid， AC Milan ",
+    "description": "Ronaldo (även kallad Ronaldo Fenômeno), född 18 september 1976[2] i Bento Ribeiro, Rio de Janeiro,[1] är en brasiliansk före detta professionell fotbollsspelare som senast spelade som anfallare för Corinthians.[1] Ronaldo började sin professionella karriär i brasilianska Cruzeiro och skrev på för PSV Eindhoven år 1994. Han spelade sedan för Barcelona, Inter, Real Madrid och AC Milan.",
+    "ballon_dor": "2",
+    "vm_champions": "2",
+    "champins_league": "3"
+  },
+  {
+    "id": "4",
+    "name": " Ronaldinho Gaúcho",
+    "img_name": "ronaldinho",
+    "nations": "Brasilien",
+    "clubs": "Paris Saint-Germain，Barcelona, AC Milan",
+    "description": "Ronaldinho,[note 1] is a Brazilian retired professional footballer who played mostly as an attacking midfielder, but was also deployed as a winger. Widely regarded as one of the greatest players of all time, Ronaldinho won two FIFA World Player of the Year awards and a Ballon_d'Or. A global icon of the sport, he was renowned for his technical skills, creativity, dribbling ability and accuracy from free-kicks, his use of tricks, feints, no-look passes and overhead kicks, as well as his ability to score and create goals, all prominent characteristics of his early-age background playing futsal.",
+    "ballon_dor": "1",
+    "vm_champions": "1",
+    "champins_league": "0"
+  },
+  {
+    "id": "5",
+    "name": "Cristiano Ronaldo",
+    "img_name": "c-ronaldo",
+    "nations": "Portugal",
+    "clubs": " Sporting Lissabon, Manchester United, Real Madrid， Juventus, Al-Nassr ",
+    "description": "CR7, född 5 februari 1985 i Funchal på Madeira,[11] är en portugisisk fotbollsspelare som spelar för saudiska Al-Nassr och Portugals landslag.[12] 2008 blev han utsedd både till Europas och till världens bästa fotbollsspelare och fick ta emot utmärkelserna Ballon_d'Or samt FIFA World Player of the Year Award.[13][14] Året innan hade han belönats med Guldskon efter att ha gjort 42 mål på 49 matcher i Manchester United,[15] där han vann tre Premier_League-titlar (2007, 2008 och 2009) samt en Champions_League-titel (2008). Ronaldo är sedan den 20 maj 2008 lagkapten i det portugisiska landslaget.",
+    "ballon_dor": "5",
+    "vm_champions": "0",
+    "champins_league": "5"
+  },
+  {
+    "id": "6",
+    "name": "Lionel Messi",
+    "img_name": "messi",
+    "nations": "Argentina",
+    "clubs": " Barcelona,  Paris Saint-Germain ",
+    "description": "Lionel Andrés Messi Cuccittini, född 24 juni 1987 i Rosario, är en argentinsk fotbollsspelare som spelar för Paris Saint-Germain. Han representerar även Argentinas landslag  Messi innehar flera målrekord inom spansk och internationell fotboll och rankas av många som en av världshistoriens absolut bästa fotbollsspelare.[5][6][7] Fyra år i rad – 2009, 2010, 2011 och 2012 – samt även 2015, 2019 och 2021 har han mottagit fotbollspriset Ballon_d'Or som Årets bästa manliga fotbollsspelare i världen. Messi har även vunnit europeiska Guldskon sex gånger som bästa målgörare i Europas toppligor, vilket är fler än någon annan.",
+    "ballon_dor": "7",
+    "vm_champions": "1",
+    "champins_league": "4"
+  },
+  {
+    "id": "7",
+    "name": "Zinédine Zidane",
+    "img_name": "zidane",
+    "nations": "Frankrike",
+    "clubs": " Ajax, Barcelona",
+    "description": "Zinédine Yazid Zidane (translitteration: Zīn ad-Dīn Zīdān), Zizou, född 23 juni 1972 i Marseille, är en fransk tränare och före detta fotbollsspelare (mittfältare). Zidane var från mitten av 1990-talet fram till VM-slutspelet 2006 Frankrikes stora fotbollsstjärna och var en av de främsta spelarna i världen i sin generation. Han utsågs till Världens bästa fotbollsspelare tre gånger (1998, 2000 och 2003). Ett av dessa år (1998) utsågs även Zidane till världens bäste idrottsman.",
+    "ballon_dor": "3",
+    "vm_champions": "1",
+    "champins_league": "1"
+  },
+  {
+    "id": "8",
+    "name": "Mesut Özil",
+    "img_name": "ozil",
+    "nations": "Tyskland",
+    "clubs": " Real Madrid,  Arsenal, Fenerbahçe, İstanbul Başakşehir",
+    "description": "Mesut Özil (German pronunciation: [ˈmeːzut ˈøːzil], Turkish: [meˈsut œˈzil]; born 15 October 1988) is a German professional footballer who plays as an attacking midfielder for Süper Lig club İstanbul Başakşehir. Özil is known for his technical skills, creativity, passing skills, and vision.[4] He can also play as a wide midfielder.",
+    "ballon_dor": "0",
+    "vm_champions": "0",
+    "champins_league": "0"
+  },
+
+  {
+    "id": "9",
+    "name": "Sadio Mané",
+    "img_name": "mane",
+    "nations": " Senegal",
+    "clubs": "Southampton ， Liverpool，  Bayern München",
+    "description": "Sadio Mané, född 10 april 1992 i Sédhiou, är en senegalesisk fotbollsspelare (anfallare) som spelar för Bayern München i Bundesliga. Han representerar även det senegalesiska landslaget.",
+    "ballon_dor": "0",
+    "vm_champions": "0",
+    "champins_league": "0"
+  },
+  {
+    "id": "10",
+    "name": "N'Golo Kanté",
+    "img_name": "kante",
+    "nations": "Frankrike",
+    "clubs": "Leicester City , Chelsea",
+    "description": "N'Golo Kanté, född 29 mars 1991 i Paris, är en fransk fotbollsspelare (mittfältare). Han spelar för Chelsea i engelska Premier_League. Han representerar även det franska landslaget.",
+    "ballon_dor": "1",
+    "vm_champions": "1",
+    "champins_league": "1"
+  },
+  {
+    "id": "11",
+    "name": "Steven Gerrard",
+    "img_name": "gerrard",
+    "nations": "England",
+    "clubs": "Liverpool",
+    "description": "Steven George Gerrard MBE (born 30 May 1980) is an English professional football manager and former player, who most recently managed Premier_League club Aston Villa. Described by pundits and fellow professionals as one of his generation's greatest players, Gerrard spent the majority of his playing career as a central midfielder for Liverpool and the England national team, captaining both.",
+    "ballon_dor": "0",
+    "vm_champions": "0",
+    "champins_league": "1"
+  },
+  {
+    "id": "12",
+    "name": "Erling Haaland ",
+    "img_name": "haaland",
+    "nations": "Norge",
+    "clubs": "Borussia Dortmund,Manchester City",
+    "description": "Erling Braut Haaland (né Håland; born 21 July 2000) is a Norwegian professional footballer who plays as a striker for Premier_League club Manchester City and the Norway national team. Considered one of the best players in the world, he is known for his speed, strength and finishing.",
+    "ballon_dor": "0",
+    "vm_champions": "0",
+    "champins_league": "1"
+  },
+  {
+    "id": "13",
+    "name": "Kylian Mbappé",
+    "img_name": "mbappe",
+    "nations": "Frankrike",
+    "clubs": "Monaco,Paris Saint-Germain",
+    "description": "Kylian Mbappé Lottin (born 20 December 1998) is a French professional footballer who plays as a forward for Ligue 1 club Paris Saint-Germain and the France national team. Considered one of the best players in the world,[2] he is renowned for his dribbling abilities, exceptional speed, and finishing.",
+    "ballon_dor": "0",
+    "vm_champions": "1",
+    "champins_league": "0"
+  }
+]
