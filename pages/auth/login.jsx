@@ -19,12 +19,6 @@ const Login = () => {
 
 
 
-  if (!user) {
-    toast.info("You Are Loged Out!!!", {
-      position: toast.POSITION.TOP_CENTER,
-      autoClose: 2000,
-    });
-  }
   // const onClick = () => toast('Toast is good', { hideProgressBar: true, autoClose: 3000, type: 'success' })
 
   // * Sign Google providfer
@@ -33,6 +27,10 @@ const Login = () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
       router.push("/dashboard");
+      toast("You Are Loged In!", {
+        // position: toast.POSITION.TOP_CENTER,
+        // autoClose: 5000,
+      });
 
 
     } catch (error) {
