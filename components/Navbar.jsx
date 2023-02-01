@@ -11,7 +11,7 @@ const Navbar = () => {
   const [user, loading] = useAuthState(auth);
   console.log(user);
   return (
-    <nav className="flex justify-between bg-slate-700 hover:bg-gray-800 hover:duration-700 w-full fixed top-0 z-50">
+    <nav className="flex justify-between bg-slate-700 hover:bg-gray-800 hover:duration-700 w-full sticky top-0 z-50">
       <Link href={"/"}>
         <h2 className="flex  items-center text-2xl text-white p-4">
           Swe-UG
@@ -23,10 +23,10 @@ const Navbar = () => {
           <Link href="/">Home</Link>
         </li>
         <li className="m-2 p-2 text-xl text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
-          <Link href="/about">Photos</Link>
+          <Link href="/photos">Photos</Link>
         </li>
         <li className="m-2 p-2 text-xl text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
-          <Link href="/about">Posts</Link>
+          <Link href="/posts">Posts</Link>
         </li>
         <li className="m-2 p-2 text-xl text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
           <Link href="/about">About</Link>

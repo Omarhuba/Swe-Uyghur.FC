@@ -9,7 +9,7 @@ import { ToastContainer } from 'react-toastify';
 export default function App({ Component, pageProps }) {
   return (<>
     <Layout>
-    <ToastContainer />
+    <ToastContainer limit={1} />
       <Component {...pageProps} />
     </Layout>
   </>
