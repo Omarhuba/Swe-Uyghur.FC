@@ -53,11 +53,6 @@ const Dashboard = () => {
         <div className="flex justify-center p-20">
           <div className="w-full max-w-lg h-100 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <div className="flex flex-col items-center p-20">
-              {/* <Image
-                className="w-20 rounded-full cursor-pointer mr-4"
-                src={img}
-                alt="img"
-              /> */}
               <img
                 className="w-40 mb-4 rounded-full cursor-pointer m-4"
                 src={user.photoURL}
