@@ -25,14 +25,26 @@ const ShowcaseItem = () => {
         alt="image"
       />
       <article className="p-6">
-        <h1 className="text-5xl  py-4 uppercase text-cyan-300">{programs[index].name}</h1>
-        <h3 className="text-xl text-white py-4">Nations: {programs[index].nations}</h3>
-        <h3 className="text-xl text-white py-2">Club: {programs[index].clubs}</h3>
-        <p className="text-2xl text-white py-2">World Cup: {programs[index].vm_champions}  Times</p>
-        <p className="text-2xl text-white py-2">Ballond_dOr: {programs[index].ballon_dor}  Times</p>
-        <p className="text-2xl text-white py-2">
-          Champions League: {programs[index].champins_league}  Times
-        </p>
+        <h1 className="text-5xl  py-4 uppercase text-cyan-300">
+          {programs[index].name}
+        </h1>
+        <h3 className="text-xl text-white py-4">
+          Nations: {programs[index].nations}
+        </h3>
+        <h3 className="text-xl text-white py-2">
+          Club: {programs[index].clubs}
+        </h3>
+        <div className="flex gap-4 ">
+          <p className="text-2xl text-white py-2">
+            World Cup: {programs[index].vm_champions}
+          </p>
+          <p className="text-2xl text-white py-2">
+            Ballond_dOr: {programs[index].ballon_dor}
+          </p>
+          <p className="text-2xl text-white py-2">
+            Champions League: {programs[index].champins_league}
+          </p>
+        </div>
         <p className="text-md text-white">{programs[index].description}</p>
       </article>
     </div>

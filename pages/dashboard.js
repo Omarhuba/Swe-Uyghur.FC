@@ -1,47 +1,29 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 import { auth } from "../utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Link from "next/link";
 import { useEffect } from "react";
-import Router, { useRouter } from "next/router";
-
-import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 
 const Dashboard = () => {
   const [user, loading] = useAuthState(auth);
-
   console.log(loading);
   const router = useRouter();
 
+  const signOut = () => {
+    setTimeout(() => {
+      auth.signOut();
+      console.log("logga ut");
+    }, 60 * 60 * 1000);
+  };
   useEffect(() => {
-    if (loading) {
-      // maybe trigger a loading screen
-
-      return
-      ;
-    }
+    if (loading) return;
     if (!user) router.push("/auth/login");
+
+    signOut();
   }, [user, loading]);
 
-  //   const getData = async () => {
-  //     if (loading){
-  //       return
-  //     } ;
-  //     if (!user){
-  //       return router.push('/auth/login')
-  //     }
-  //   }
-  //   useEffect(() => {
-  //     getData()
-  // // eslint-disable-next-line
-  // },[user, loading])
-  // useEffect(() => {
-  //   getData();
-  // },[user, loading])
-
-  if (loading) {
-
-  }
   return (
     <>
       {user && (
@@ -63,7 +45,7 @@ const Dashboard = () => {
               </div>
               <div className="flex mt-4 space-x-8 md:mt-6">
                 <Link
-                  href="/mypost"
+                  href="/"
                   className="inline-flex items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   To Home
@@ -85,8 +67,6 @@ const Dashboard = () => {
           </div>
         </div>
       )}
-
-
     </>
   );
 };
