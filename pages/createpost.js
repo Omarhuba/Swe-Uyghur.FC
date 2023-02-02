@@ -4,6 +4,7 @@ import { auth, db } from '../utils/firebase';
 import { useAuthState } from "react-firebase-hooks/auth";
 import Router, { useRouter } from "next/router";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { toast } from "react-toastify";
 
 const Createpost = () => {
   const [post, setPost] = useState({discription: ''})
@@ -13,6 +14,21 @@ const Createpost = () => {
   const submitHandler = async (e)=>{
     e.preventDefault();
 
+    //
+    if(!post.discription){
+      toast.error('You Missed A Post..',{
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 1000
+      })
+      return
+    }
+    if(post.discription.length > 300){
+      toast.error('POST CAN NOT BE LONGER THAN 300..!!',{
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 1000
+      })
+      return
+    }
     //make a post
     const collectionRef = collection(db, 'posts')
     await addDoc(collectionRef,{

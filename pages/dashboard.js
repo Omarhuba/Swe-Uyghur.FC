@@ -1,33 +1,53 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
-import { auth } from "../utils/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
+import { auth, db } from "../utils/firebase";
+import { useAuthState, useVerifyBeforeUpdateEmail } from "react-firebase-hooks/auth";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { Message } from "../components/Message";
+import { collection, onSnapshot, query, where } from "firebase/firestore";
+
 
 const Dashboard = () => {
   const [user, loading] = useAuthState(auth);
-  console.log(loading);
+  const [posts, setPosts] = useState([]);
+  console.log(user);
   const router = useRouter();
 
   const signOut = () => {
     setTimeout(() => {
       auth.signOut();
-      console.log("logga ut");
     }, 60 * 60 * 1000);
   };
-  useEffect(() => {
+
+  const getData = () => {
     if (loading) return;
     if (!user) router.push("/auth/login");
 
+    const collectionRef = collection(db, "posts");
+        const q = query(collectionRef, where("user", "==", user.uid));
+        const unsubscribe = onSnapshot(q, (snapshot) => {
+          setPosts(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+        });
+        return unsubscribe;
+
+
+};
+
+
+
+  useEffect(() => {
+    // if (loading) return;
+    // if (!user) router.push("/auth/login");
+    getData();
     signOut();
   }, [user, loading]);
 
   return (
     <>
       {user && (
-        <div className="flex justify-center p-20">
+        <div className="flex justify-center p-10">
           <div className="w-full max-w-lg h-100 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <div className="flex flex-col items-center py-10">
               <div className="flex w-full justify-center items-center">
@@ -67,6 +87,16 @@ const Dashboard = () => {
           </div>
         </div>
       )}
+      ;
+      <div className="h-full  py-6 min-h-full">
+        <h1 className="text-center">this is your post</h1>
+        <div>
+        {posts.map((post) => {
+         return <Message {...post} key={post.id}></Message>
+        })}
+
+        </div>
+      </div>
     </>
   );
 };
