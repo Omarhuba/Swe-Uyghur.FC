@@ -41,7 +41,7 @@ export default function Home() {
               GET STARTED
             </Link>
             <Link
-              href="/album"
+              href="/photos"
               className="flex items-center border-solid border-2 border-white text-2xl py-2 px-10 ml-3 bg-white hover:bg-none"
             >
               VIDEOS <BsPlayCircle className="ml-3" />
