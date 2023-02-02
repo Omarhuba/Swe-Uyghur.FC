@@ -27,9 +27,9 @@ const Login = () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
       router.push("/dashboard");
-      toast("You Are Loged In!", {
-        // position: toast.POSITION.TOP_CENTER,
-        // autoClose: 5000,
+      toast("Welcome To SweUyghur Football Club!⚽️🏆", {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 3000,
       });
 
 
