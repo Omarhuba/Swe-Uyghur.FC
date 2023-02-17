@@ -5,26 +5,30 @@ import Image from "next/image";
 const ShowcaseItem = () => {
   const [index, setIndex] = useState(0);
 
-  useEffect(() => {
-    const intervalID = setInterval(() => {
-      setIndex((index) => {
-        if (index < programs.length - 1) {
-          return index + 1;
-        } else {
-          return 0;
-        }
-      });
-    }, 4000);
-    return () => clearInterval(intervalID);
-  }, []);
+  // useEffect(() => {
+  //   const intervalID = setInterval(() => {
+  //     setIndex((index) => {
+  //       if (index < programs.length - 1) {
+  //         return index + 1;
+  //       } else {
+  //         return 0;
+  //       }
+  //     });
+  //   }, 4000);
+  //   return () => clearInterval(intervalID);
+  // }, []);
   return (
     <div className="flex min-h-screen bg-slate-600 justify-center items-center  gap-10 shadow-lg text-center min-w-2xl w-full">
-      <Image
-        className="w-[900px] h-[600px] p-6 rounded-lg"
-        src={require(`../../assets/showcase/${programs[index].img_name}.png`)}
-        alt="image"
-      />
-      <article className="p-6">
+      {programs.map((img) => (
+        <Image
+        key={img.id}
+          className="w-[1400px] h-[800px] rounded-3xl"
+          src={require(`../../assets/showcase/${img.img_name}.png`)}
+          alt="image"
+        />
+
+      ))}
+      {/* <article className="p-6">
         <h1 className="text-5xl  py-4 uppercase text-cyan-300">
           {programs[index].name}
         </h1>
@@ -46,7 +50,7 @@ const ShowcaseItem = () => {
           </p>
         </div>
         <p className="text-md text-white">{programs[index].description}</p>
-      </article>
+      </article> */}
     </div>
   );
 };

@@ -43,7 +43,7 @@ import { BsFacebook, BsYoutube, BsInstagram, BsTwitter } from 'react-icons/bs'
             </div>
           </div>
         </div>
-        <section className='w-screen '>
+        <section className='w-full '>
           <div className='flex justify-between items-center w-full max-w-screen mt-12 '>
             <div className='text-white justify-self-start ml-12 cursor-pointer text-2xl flex items-center '>
               <Link className='flex' href="/">Swe-Uyghur FC <SiTypo3 className="pl-2 text-3xl" /></Link>
