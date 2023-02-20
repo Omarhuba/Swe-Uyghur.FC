@@ -21,7 +21,7 @@ export const ShowCase = ({ children: images,name, autoSlide = false, autoInterva
   },)
 
   return (
-    <div className="overflow-hidden relative max-w-screen-lg m-auto my-10">
+    <div className="overflow-hidden relative max-w-screen-sm m-auto my-10">
       <div
         className="flex  transition-transform ease-out duration-500"
         style={{ transform: `translateX(-${curr * 100}%)` }}
@@ -29,12 +29,12 @@ export const ShowCase = ({ children: images,name, autoSlide = false, autoInterva
         {images}
       </div>
 
-      <div className="absolute flex inset-0 items-center justify-between px-10">
+      <div className="absolute flex inset-0 items-center justify-between px-5">
         <button onClick={prev}>
-          <BsFillArrowLeftCircleFill size={40} className="text-white" />
+          <BsFillArrowLeftCircleFill size={30} className="text-white" />
         </button>
         <button onClick={next}>
-          <BsFillArrowRightCircleFill size={40} className="text-white" />
+          <BsFillArrowRightCircleFill size={30} className="text-white" />
         </button>
       </div>
       <div className="absolute bottom-8 right-0 left-0 text-white">
