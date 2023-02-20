@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsPlayCircle } from "react-icons/bs";
 import ShowcaseItem from "../components/showcase/ShowcaseItem";
-import programs from "../assets/showcase/program.json";
 import { ShowCase } from "../components/showcase/ShowCase";
 
 export default function Home() {
@@ -50,17 +49,7 @@ export default function Home() {
             </div>
           </div>
           {/* <ShowcaseItem  /> */}
-          <ShowCase autoSlide={true} >
-            {[...programs.map((images) => (
-              <Image
-                key={images.id}
-                className="w-[1440px] h-[700px]  rounded-3xl"
-                src={require(`../assets/showcase/${images.img_name}.png`)}
-                alt="image"
 
-                />
-            ))]}
-          </ShowCase>
           <div className="min-h-screen bg-red-600 z-40">
             <h1>hellowwwww</h1>
           </div>
