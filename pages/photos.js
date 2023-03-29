@@ -19,8 +19,8 @@ const Photos = () => {
                 />
             ))]}
           </ShowCase>
-          <div>
-            <h1 className='text-2xl text-center py-4'>Our image</h1>
+          <div className='bg-yellow-700 min-h-screen'>
+            <h1 className='text-4xl text-center py-12'>Våran photo ska vara här med som image galeri </h1>
             <div></div>
           </div>
     </div>

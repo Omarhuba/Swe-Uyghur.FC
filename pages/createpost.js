@@ -10,6 +10,7 @@ const Createpost = () => {
   const [post, setPost] = useState({discription: ''})
   const [user,loading] = useAuthState(auth)
   const router = useRouter()
+  const updateData = router.query
 
   const submitHandler = async (e)=>{
     e.preventDefault();
