@@ -29,7 +29,6 @@ export default function Delatils() {
         position: toast.POSITION.TOP_CENTER,
         autoClose: 1500,
       });
-      // router.push("/posts");
       return;
     }
     const docRef = doc(db, "posts", routeData.id);
