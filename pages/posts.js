@@ -35,7 +35,10 @@ const Posts = () => {
           >
             <span className="flex gap-2 pt-4">
               <FcComments size={25} />
-              <button>Kommentarer</button>
+              <button>
+                {post.comments?.length > 0 ? post.comments?.length : 0}
+                <span className="px-2">Kommentarer</span>
+              </button>
             </span>
           </Link>
         </Message>

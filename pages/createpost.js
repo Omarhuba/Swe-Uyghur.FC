@@ -41,7 +41,10 @@ const Createpost = () => {
       const docRef = doc(db, "posts", post.id);
       const updatePost = { ...post, timestamp: serverTimestamp() };
       await updateDoc(docRef, updatePost);
-      toast.success("Din inlägg har uppdaterat! 🥸", {position: toast.POSITION.TOP_CENTER, autoClose: 1500})
+      toast.success("Din inlägg har uppdaterat! 🥸", {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 1500,
+      });
       return router.push("/posts");
     } else {
       //make a post
@@ -54,7 +57,10 @@ const Createpost = () => {
         username: user.displayName,
       });
       setPost({ discription: "" });
-      toast.success("Din inlägg har gjorts! 🥸", {position: toast.POSITION.TOP_CENTER, autoClose: 1500})
+      toast.success("Din inlägg har gjorts! 🥸", {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 1500,
+      });
       return router.push("/posts");
     }
   };

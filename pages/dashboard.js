@@ -38,7 +38,6 @@ const Dashboard = () => {
 
     const collectionRef = collection(db, "posts");
     const q = query(collectionRef, where("user", "==", user.uid));
-    console.log(q.uid + "hej");
     const unsubscribe = onSnapshot(q, (snapshot) => {
       setPosts(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
@@ -117,7 +116,7 @@ const Dashboard = () => {
                     <BsTrash2Fill />
                     Delete
                   </button>
-                  <Link href={{ pathname: "/createpost", query: post}}>
+                  <Link href={{ pathname: "/createpost", query: post }}>
                     <button className="flex justify-center items-center gap-1 text-cyan-600 text-sm">
                       <AiFillEdit />
                       Edit
