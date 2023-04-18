@@ -41,7 +41,7 @@ export default function Delatils() {
       }),
     });
     setMessages("");
-    // router.push("/posts");
+    // router.push("/posts");asdasdasd
   };
 
   // HÄMTA KOMMENTAR
