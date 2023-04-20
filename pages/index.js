@@ -2,8 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { BsPlayCircle } from "react-icons/bs";
-import ShowcaseItem from "../components/showcase/ShowcaseItem";
-import { ShowCase } from "../components/showcase/ShowCase";
+import { CalendarGfg } from "../components/CalendarGfg";
+import { Aktivitet } from "../components/Aktivitet";
 
 export default function Home() {
   return (
@@ -49,10 +49,13 @@ export default function Home() {
             </div>
           </div>
           {/* <ShowcaseItem  /> */}
+          <Aktivitet />
+          <hr />
+          <br />
+          <CalendarGfg />
+        </div>
+        <div className="bg-white min-h-screen">
 
-          <div className="min-h-screen bg-red-600 z-40">
-            <h1>hellowwwww</h1>
-          </div>
         </div>
       </main>
     </>

@@ -4,7 +4,7 @@ import {
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
 
-export const ShowCase = ({ children: images,name, autoSlide = false, autoInterval = 4000 }) => {
+export const ShowCase = ({ children: images,name, autoSlide = false, autoInterval = 3000 }) => {
   const [curr, setCurr] = useState(0);
 
   const prev = () => {

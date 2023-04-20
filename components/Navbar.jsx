@@ -6,10 +6,8 @@ import { auth } from "../utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useState } from "react";
 
-
 const Navbar = () => {
   const [user, loading] = useAuthState(auth);
-  console.log(user);
   return (
     <nav className="flex justify-between bg-slate-700 hover:bg-gray-800 hover:duration-700 w-full sticky top-0 z-50">
       <Link href={"/"}>
@@ -35,8 +33,12 @@ const Navbar = () => {
           <>
             <div className="flex">
               <Link href="/dashboard">
-              <img className="w-12 rounded-full cursor-pointer mr-4 ml-10" src={user.photoURL} alt="img" />
-                </Link>
+                <img
+                  className="w-12 rounded-full cursor-pointer mr-4 ml-10"
+                  src={user.photoURL}
+                  alt="img"
+                />
+              </Link>
               {/* <h3 className="text-l text-white">{user.displayName}</h3> */}
             </div>
           </>

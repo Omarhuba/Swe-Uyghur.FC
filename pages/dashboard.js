@@ -1,13 +1,24 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 import { auth, db } from "../utils/firebase";
-import { useAuthState, useVerifyBeforeUpdateEmail } from "react-firebase-hooks/auth";
+import {
+  useAuthState,
+  useVerifyBeforeUpdateEmail,
+} from "react-firebase-hooks/auth";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Message } from "../components/Message";
-import { collection, onSnapshot, query, where } from "firebase/firestore";
-
+import {
+  collection,
+  deleteDoc,
+  doc,
+  onSnapshot,
+  query,
+  where,
+} from "firebase/firestore";
+import { BsTrash2Fill } from "react-icons/bs";
+import { AiFillEdit } from "react-icons/ai";
 
 const Dashboard = () => {
   const [user, loading] = useAuthState(auth);
@@ -26,16 +37,17 @@ const Dashboard = () => {
     if (!user) router.push("/auth/login");
 
     const collectionRef = collection(db, "posts");
-        const q = query(collectionRef, where("user", "==", user.uid));
-        const unsubscribe = onSnapshot(q, (snapshot) => {
-          setPosts(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-        });
-        return unsubscribe;
+    const q = query(collectionRef, where("user", "==", user.uid));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      setPosts(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    });
+    return unsubscribe;
+  };
 
-
-};
-
-
+  const deletePost = async (id) => {
+    const docRef = doc(db, "posts", id);
+    await deleteDoc(docRef);
+  };
 
   useEffect(() => {
     // if (loading) return;
@@ -89,12 +101,31 @@ const Dashboard = () => {
       )}
       ;
       <div className="h-full  py-6 min-h-full">
-        <h1 className="text-center">this is your post</h1>
+        <h1 className="text-center text-3xl ">This is your post</h1>
         <div>
-        {posts.map((post) => {
-         return <Message {...post} key={post.id}></Message>
-        })}
-
+          {posts.map((post) => {
+            return (
+              <Message {...post} key={post.id}>
+                <div className="flex gap-4 py-2">
+                  <button
+                    onClick={() => {
+                      deletePost(post.id);
+                    }}
+                    className="flex justify-center items-center gap-1 text-red-600 text-sm"
+                  >
+                    <BsTrash2Fill />
+                    Delete
+                  </button>
+                  <Link href={{ pathname: "/createpost", query: post }}>
+                    <button className="flex justify-center items-center gap-1 text-cyan-600 text-sm">
+                      <AiFillEdit />
+                      Edit
+                    </button>
+                  </Link>
+                </div>
+              </Message>
+            );
+          })}
         </div>
       </div>
     </>
