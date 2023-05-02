@@ -57,7 +57,7 @@ const Dashboard = () => {
   }, [user, loading]);
 
   return (
-    <>
+    <div>
       {user && (
         <div className="flex justify-center p-10">
           <div className="w-full max-w-lg h-100 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
@@ -128,7 +128,7 @@ const Dashboard = () => {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
