@@ -6,27 +6,29 @@ import { auth } from "../utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useState } from "react";
 
-const Navbar = () => {
+export const Navbar = () => {
   const [user, loading] = useAuthState(auth);
   return (
     <nav className="flex justify-between bg-slate-700 hover:bg-gray-800 hover:duration-700 w-full sticky top-0 z-50">
       <Link href={"/"}>
-        <h2 className="flex  items-center text-2xl text-white p-4">
-          Swe-UG
-          <SiTypo3 className="pl-2 text-3xl" />
-        </h2>
+        <article className="flex justify-center items-center w-10 sm:w-48 gap-2">
+          <h2 className="sm:flex hidden  items-center text-4xl text-white ">
+            Swe-UG
+          </h2>
+          <SiTypo3 className="text-white text-4xl sm:3xl" />
+        </article>
       </Link>
-      <ul className="flex items-center w-full max-w-lg">
-        <li className="m-2 p-2 text-xl text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
+      <ul className="flex items-center gap-3">
+        <li className=" text-md sm:text-xl sm:px-4 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
           <Link href="/">Home</Link>
         </li>
-        <li className="m-2 p-2 text-xl text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
+        <li className=" text-md sm:text-xl sm:px-4 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
           <Link href="/photos">Photos</Link>
         </li>
-        <li className="m-2 p-2 text-xl text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
+        <li className=" text-md sm:text-xl sm:px-4 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
           <Link href="/posts">Posts</Link>
         </li>
-        <li className="m-2 p-2 text-xl text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
+        <li className=" text-md sm:text-xl sm:px-4 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
           <Link href="/about">About</Link>
         </li>
         {user && (
@@ -34,7 +36,7 @@ const Navbar = () => {
             <div className="flex">
               <Link href="/dashboard">
                 <img
-                  className="w-12 rounded-full cursor-pointer mr-4 ml-10"
+                  className="sm:w-14 w-8 rounded-full cursor-pointer sm:ml-6 "
                   src={user.photoURL}
                   alt="img"
                 />
@@ -55,5 +57,3 @@ const Navbar = () => {
     </nav>
   );
 };
-
-export default Navbar;

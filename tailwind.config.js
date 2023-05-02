@@ -2,12 +2,23 @@
 const pxToRem = (px, base = 16) => `${px / base}rem`;
 
 module.exports = {
-  mode: 'jit',
+  mode: "jit",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: false,
   theme: {
+    screens: {
+      sm: "640px",
+      // => @media (min-width: 640px) { ... }
+
+      lg: "860px",
+      // => @media (min-width: 1024px) { ... }
+
+      xl: "1280px",
+      // => @media (min-width: 1280px) { ... }
+    },
     extend: {
       fontFamily: {
         poppins: "Poppins",
@@ -34,9 +45,9 @@ module.exports = {
         72: pxToRem(320),
       },
       maxWidth: {
-        modalNarrow: '24rem',
-        modalWide: '40rem',
-        appContent: '88rem',
+        modalNarrow: "24rem",
+        modalWide: "40rem",
+        appContent: "88rem",
         1: pxToRem(4),
         2: pxToRem(8),
         3: pxToRem(12),
@@ -63,4 +74,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
