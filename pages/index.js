@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { BsPlayCircle } from "react-icons/bs";
-import { MatchDay } from "../components/MatchDay";
+import { MatchDay } from "../components/matchDay/MatchDay";
 import { Aktivitet } from "../components/Aktivitet";
 
 export default function Home() {

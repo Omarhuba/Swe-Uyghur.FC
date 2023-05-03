@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import axios from "axios";
-import matchDay from "../assets/images/matchday.png";
+import matchDay from "../../assets/images/matchday.png";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MatchDayItem } from "./matchDay/MatchDayItem";
+import { MatchDayItem } from "./MatchDayItem.jsx";
 
 async function fetchData() {
   const url = "https://api.football-data.org/v4/matches";
@@ -13,6 +13,7 @@ async function fetchData() {
     headers: {
       "X-Auth-Token": "f37121ea74c14c4fab9304f8ce1a633e",
     },
+    mode: "cors",
   };
   try {
     const response = await fetch(url, options);
@@ -36,16 +37,27 @@ export function MatchDay() {
     return <div>Loading.....</div>;
   }
   return (
-    <div className="bg-slate-700 w-full h-screen ">
-      <div className="bg-slate-300 w-full rounded-lg ">
+    <div className="">
+      <div className="bg-gray-700  ">
         <div className="flex items-center justify-center flex-col py-8">
-          <h1 className="text-2xl sm:text-5xl text-white">Match Day</h1>
-          {getData.filters.dateFrom}----{getData.filters.dateTo}
+          <h1 className="text-2xl sm:text-6xl text-white font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-teal-500">
+            Match Day
+          </h1>
+          <div className="flex gap-6 py-4 ">
+            <h3 className=" text-gray-300 text-xl sm:text-4xl">
+              {getData.filters.dateFrom}
+            </h3>
+            <h3 className=" text-gray-300 text-xl sm:text-4xl">
+              {getData.filters.dateTo}
+            </h3>
+          </div>
           {/* <img src="../assets/images/matchday.png" alt="image" /> */}
         </div>
-        <div>
+        <div className="sm:grid grid-cols-2 gap-4 min-w-72">
           {getData.matches.map((children) => (
-            <MatchDayItem key={children.id}>{children}</MatchDayItem>
+            <MatchDayItem className="" key={children.id}>
+              {children}
+            </MatchDayItem>
           ))}
         </div>
         {/* <MatchDayItem matchData={matchData} /> */}

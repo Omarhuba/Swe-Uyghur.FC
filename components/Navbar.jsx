@@ -9,7 +9,7 @@ import { useState } from "react";
 export const Navbar = () => {
   const [user, loading] = useAuthState(auth);
   return (
-    <nav className="flex justify-between bg-slate-700 hover:bg-gray-800 hover:duration-700 w-full sticky top-0 z-50">
+    <nav className="flex justify-between bg-slate-800 hover:bg-slate-950 hover:duration-700 w-full sticky top-0 z-50 opacity-95">
       <Link href={"/"}>
         <article className="flex justify-center items-center w-10 sm:w-48 gap-2">
           <h2 className="sm:flex hidden  items-center text-4xl text-white ">
