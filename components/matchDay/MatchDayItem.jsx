@@ -2,9 +2,6 @@
 
 import { MatchDay } from "./MatchDay";
 export const MatchDayItem = ({ children }) => {
-  const sortByLeague = children;
-  console.log("item", sortByLeague);
-
   const isoDateString = children.utcDate;
   const date = new Date(isoDateString);
   const formattedDate = date
