@@ -2,14 +2,28 @@
 import React from "react";
 import { Message } from "../components/Message";
 import { useState, useEffect } from "react";
-import { db } from "../utils/firebase";
+import { auth, db } from "../utils/firebase";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import Link from "next/link";
 import { FcComments } from "react-icons/fc";
+import { useAuthState } from "react-firebase-hooks/auth";
+import Router, { useRouter } from "next/router";
 
 const Posts = () => {
   //  get all the post
   const [allPosts, setAllPosts] = useState([]);
+  const [user, loading] = useAuthState(auth);
+  const router = useRouter();
+
+  // check user
+  const checkeUser = () => {
+    if (loading) return;
+    if (!user) router.push("/auth/login");
+  };
+
+  useEffect(() => {
+    checkeUser();
+  }, [user, loading]);
 
   const getPosts = async () => {
     const collectionRef = collection(db, "posts");

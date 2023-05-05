@@ -4,19 +4,26 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
+
+//! annat sätt
+// import * as firebase from "firebase/app";
+// import "firebase/storage";
+// import "firebase/firestore";
+
 // https://firebase.google.com/docs/web/setup#available-libraries
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDmrrVG3e6Oz4pAMEMRskSuHIMdTyfFFYo",
-  authDomain: "swe-uyghur.firebaseapp.com",
-  projectId: "swe-uyghur",
-  storageBucket: "swe-uyghur.appspot.com",
-  messagingSenderId: "564314730031",
-  appId: "1:564314730031:web:5dab728c7b47d58cf0a0da",
-  measurementId: "G-0F476MWFWP",
+  apiKey: "AIzaSyBLUuU_m_xM72mgIjR4gYcZLkfpK8TWXYE",
+  authDomain: "swe-uyghur-fc.firebaseapp.com",
+  projectId: "swe-uyghur-fc",
+  storageBucket: "swe-uyghur-fc.appspot.com",
+  messagingSenderId: "947461868116",
+  appId: "1:947461868116:web:913793cffc8b40d3457bc1",
+  measurementId: "G-NLWXTF8SD7",
 };
+
 // const firebaseConfig = {
 //     apiKey: process.env.NEXT_PUBLIC_API_KEY,
 //     authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
@@ -29,7 +36,15 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
 export const auth = getAuth();
 export const db = getFirestore(app);
 export const storage = getStorage(app);
 // const analytics = getAnalytics(app);
+
+//! annat sätt
+// firebase.initializeApp(firebaseConfig);
+// const projectStorage = firebase.storage();
+// const projectFireStore = firebase.firestore();
+
+// export { projectStorage, projectFireStore };
