@@ -4,7 +4,12 @@ import {
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
 
-export const ShowCase = ({ children: images,name, autoSlide = false, autoInterval = 3000 }) => {
+export const ShowCase = ({
+  children: images,
+  name,
+  autoSlide = false,
+  autoInterval = 3000,
+}) => {
   const [curr, setCurr] = useState(0);
 
   const prev = () => {
@@ -14,11 +19,11 @@ export const ShowCase = ({ children: images,name, autoSlide = false, autoInterva
     setCurr((curr) => (curr === images.length - 1 ? 0 : curr + 1));
   };
 
-  useEffect(()=>{
-    if(!autoSlide) return
-    const slideInterval = setInterval(next, autoInterval)
-    return () => clearInterval(slideInterval)
-  },)
+  useEffect(() => {
+    if (!autoSlide) return;
+    const slideInterval = setInterval(next, autoInterval);
+    return () => clearInterval(slideInterval);
+  });
 
   return (
     <div className="overflow-hidden relative max-w-screen-sm m-auto my-10">
@@ -42,9 +47,14 @@ export const ShowCase = ({ children: images,name, autoSlide = false, autoInterva
       </div>
       <div className="absolute bottom-4 right-0 left-0">
         <div className="flex items-center justify-center gap-2">
-            {images.map((_,index)=>(
-                <div key={index} className={`transition-all w-3 h-3 bg-white rounded-full ${curr === index ? "p-2" : "bg-opacity-50"} `} />
-            ))}
+          {images.map((_, index) => (
+            <div
+              key={index}
+              className={`transition-all w-3 h-3 bg-white rounded-full ${
+                curr === index ? "p-2" : "bg-opacity-50"
+              } `}
+            />
+          ))}
         </div>
       </div>
     </div>
