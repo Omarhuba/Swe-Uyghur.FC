@@ -27,15 +27,15 @@ export const ImagesGrid = () => {
       setDocs(documents);
       return unsubscribe;
     });
-  }, [collection]);
+  }, []);
 
   return (
-    <div className="flex">
+    <div className="mx-auto grid grid-cols-3 gap-2">
       {docs &&
         docs.map((doc) => (
-          <div key={doc.id}>
+          <div key={doc.id} className=" ">
             <img
-              className=" max-w-[400px] max-h-72"
+              className=" top-0 left-0 w-full h-full object-cover p-4"
               src={doc.url}
               alt="images"
             />

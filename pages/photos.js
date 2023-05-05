@@ -7,7 +7,7 @@ import { TeamImages } from "../components/images/TeamImages";
 const Photos = () => {
   return (
     <div className="flex items-center flex-col  ">
-      <h1 className="text-2xl sm:text-6xl text-white font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-teal-500 py-4">
+      <h1 className="text-2xl sm:text-6xl text-white font-bold bg-clip-text text-transparent bg-cyan-700 py-4">
         Football Legends
       </h1>
       <ShowCase autoSlide={true}>
