@@ -34,13 +34,14 @@ const Dashboard = () => {
   const getData = () => {
     if (loading) return;
     if (!user) router.push("/auth/login");
-
-    const collectionRef = collection(db, "posts");
-    const q = query(collectionRef, where("user", "==", user.uid));
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      setPosts(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    });
-    return unsubscribe;
+    if (user) {
+      const collectionRef = collection(db, "posts");
+      const q = query(collectionRef, where("user", "==", user.uid));
+      const unsubscribe = onSnapshot(q, (snapshot) => {
+        setPosts(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      });
+      return unsubscribe;
+    }
   };
 
   const deletePost = async (id) => {

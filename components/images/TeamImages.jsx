@@ -6,14 +6,15 @@ import Router, { useRouter } from "next/router";
 import { ProgressBar } from "../images/ProgressBar";
 import { ref, uploadBytes } from "firebase/storage";
 import { ImagesGrid } from "./ImagesGrid";
+import { Modal } from "../../components/images/Modal";
 
 export const TeamImages = () => {
   const [user, loading] = useAuthState(auth);
   const router = useRouter();
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
   const types = ["image/png", "image/jpeg"];
-
   //* check our user
   const checkeUser = () => {
     if (loading) return;
@@ -53,7 +54,13 @@ export const TeamImages = () => {
           {file && <div>{file.name}</div>}
           {file && <ProgressBar file={file} setFile={setFile} />}
         </div>
-        <ImagesGrid />
+        <ImagesGrid setSelectedImage={setSelectedImage} />
+        {selectedImage && (
+          <Modal
+            selectedImage={selectedImage}
+            setSelectedImage={setSelectedImage}
+          />
+        )}
       </div>
     </div>
   );
