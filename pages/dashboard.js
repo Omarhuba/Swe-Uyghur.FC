@@ -59,44 +59,52 @@ const Dashboard = () => {
   return (
     <div>
       {user && (
-        <div className="flex justify-center p-10">
-          <div className="w-full max-w-lg h-100 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <div className="flex flex-col items-center py-10">
-              <div className="flex w-full justify-center items-center">
+        <div className="flex justify-center p-4">
+          <div className="w-full  bg-white border mt-10 sm:max-w-xl border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <div className="flex flex-col items-center py-6 ">
+              <div className="flex w-full justify-center items-center gap-4 ">
                 <img
-                  className="w-30 mb-4 rounded-full cursor-pointer m-4"
+                  className="w-16 sm:w-32 mb-4 rounded-full cursor-pointer m-4"
                   src={user.photoURL}
                   alt="img"
                 />
                 <span className="text-xl text-gray-500 dark:text-gray-400">
-                  <h1 className="mb-1 text-2xl font-medium text-gray-900 dark:text-white">
+                  <h1 className="uppercase text-xl font-medium text-gray-900 dark:text-white">
                     {user.displayName}
                   </h1>
-                  {user.email}
+                  <h4 className="text-base">{user.email}</h4>
                 </span>
               </div>
-              <div className="flex mt-4 space-x-2 md:mt-6">
+              <div className="grid grid-cols-2 gap-6 mt-4">
                 <Link
                   href="/"
-                  className="inline-flex items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  Home
+                  To Home
                 </Link>
                 <Link
                   href="/photos"
-                  className="inline-flex items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  Photos
+                  To Photos
+                </Link>
+                <Link
+                  href="/posts"
+                  className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  To Posts
                 </Link>
                 <Link
                   href="/createpost"
-                  className="inline-flex items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Create a Post
                 </Link>
+              </div>
+              <div className="py-6 px-10  flex justify-end w-full">
                 <button
                   onClick={() => auth.signOut()}
-                  className="inline-flex items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Logout
                 </button>
@@ -107,7 +115,7 @@ const Dashboard = () => {
       )}
       ;
       <div className="h-full  py-6 min-h-full">
-        <h1 className="text-center text-3xl ">This is your post</h1>
+        <h1 className="text-center text-3xl ">Your Post</h1>
         <div>
           {posts.map((post) => {
             return (

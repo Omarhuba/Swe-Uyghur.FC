@@ -79,16 +79,16 @@ const Createpost = () => {
   }, [user, loading]);
 
   return (
-    <div className="h-screen bg-cyan-700 flex justify-center ">
-      <div className="my-20 p-12 shadow-2xl rounded-xl min-w-[650px] max-h-[450px] mx-auto bg-white">
+    <div className=" bg-cyan-700 flex justify-center p-4">
+      <div className="my-20 p-6 w-full shadow-2xl rounded-xl sm:max-w-2xl   mx-auto bg-white">
         <form onSubmit={submitHandler}>
-          <h1 className="font-bold text-3xl font-poppins">
+          <h1 className="font-bold text-xl sm:text-3xl font-poppins">
             {post.hasOwnProperty("id")
               ? "Edit Your  Post"
               : "Create A New Post"}
           </h1>
           <div className="py-2">
-            <h3 className="font-poppins font-medium text-md py-2">
+            <h3 className="font-poppins font-medium text-base sm:text-xl py-2">
               Description
             </h3>
             <textarea
@@ -108,7 +108,7 @@ const Createpost = () => {
           </div>
           <button
             type="submit"
-            className="text-white font-medium w-full bg-slate-600 p-3 rounded-lg"
+            className=" flex justify-center items-center text-white font-medium w-full sm:max-w-lg mx-auto bg-slate-600 p-3 rounded-lg"
           >
             Submit
           </button>

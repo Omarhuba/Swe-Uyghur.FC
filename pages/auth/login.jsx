@@ -32,8 +32,8 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-[700px] py-10">
-      <div className="shadow-xl min-w-[600px]  p-10 text-gray-700">
+    <div className="flex items-center justify-center sm:min-h-[700px] min-h-[500px] py-10">
+      <div className="shadow-2xl sm:w-2/4  p-10 text-gray-700">
         <h1 className="text-2xl font-medium">Join Today!</h1>
         <div className="py-4">
           <h3 className="py-4">Sign in with one of the providers</h3>
