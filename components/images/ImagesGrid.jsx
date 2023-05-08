@@ -24,7 +24,7 @@ export const ImagesGrid = ({ setSelectedImage }) => {
   }, []);
 
   return (
-    <div className="mx-auto grid grid-cols-3 px-8">
+    <div className="mx-auto grid grid-cols-2 sm:grid-cols-3 px-8">
       {docs &&
         docs.map((doc) => (
           <motion.div

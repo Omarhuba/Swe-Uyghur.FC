@@ -33,7 +33,7 @@ export function MatchDay() {
     <div className="">
       <div className="bg-gray-700  ">
         <div className="flex items-center justify-center flex-col py-8">
-          <h1 className="text-2xl sm:text-6xl text-white font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-teal-500">
+          <h1 className="text-2xl sm:text-6xl  font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-400 to-yellow-400">
             Match Day
           </h1>
           <div className="flex gap-6 py-4 ">
