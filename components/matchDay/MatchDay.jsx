@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
 import { MatchDayItem } from "./MatchDayItem.jsx";
+import matchday from "../../assets/images/matchday.png";
+import Image from "next/image";
 
 async function fetchData() {
   const url = "https://api.football-data.org/v4/matches";
@@ -33,9 +35,15 @@ export function MatchDay() {
     <div className="">
       <div className="bg-gray-700  ">
         <div className="flex items-center justify-center flex-col py-8">
-          <h1 className="text-2xl sm:text-6xl  font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-400 to-yellow-400">
+          <Image
+            className=" w-44 sm:w-80"
+            src={matchday}
+            alt="img"
+            priority={true}
+          />
+          {/* <h1 className="text-2xl sm:text-6xl  font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-cyan-400 to-yellow-400">
             Match Day
-          </h1>
+          </h1> */}
           <div className="flex gap-6 py-4 ">
             <h3 className=" text-gray-300 text-xl sm:text-4xl">
               {getData.filters.dateFrom}

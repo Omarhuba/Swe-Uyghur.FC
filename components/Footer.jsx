@@ -24,8 +24,8 @@ const Footer = () => {
         </div>
       </section>
       <div className="flex justify-center  mt-10 mb-10">
-        <div className="grid grid-cols-2 gap-4 xl:flex ">
-          <div className="flex flex-col items-start mx-10 w-40 text-white">
+        <div className="grid grid-cols-2 gap-8 xl:flex ">
+          <div className="flex flex-col items-start  w-40 text-white">
             <h2 className="text-xl sm:text-2xl font-bold mb-2">About Us</h2>
             <Link href={"/"} className="text-sm sm:text-base">
               How it works
@@ -37,7 +37,7 @@ const Footer = () => {
               Docs
             </Link>
           </div>
-          <div className="flex flex-col items-start mx-10 w-40 text-white">
+          <div className="flex flex-col items-start  w-40 text-white">
             <h2 className="text-xl sm:text-2xl font-bold mb-2">Contact Us</h2>
             <Link href={"/"} className="text-sm sm:text-base">
               Contact
@@ -49,7 +49,7 @@ const Footer = () => {
               Help
             </Link>
           </div>
-          <div className="flex flex-col items-start mx-10 w-40 text-white">
+          <div className="flex flex-col items-start  w-40 text-white">
             <h2 className="text-xl sm:text-2xl font-bold mb-2">Resources</h2>
             <Link href={"/"} className="text-sm sm:text-base">
               Blog
@@ -58,7 +58,7 @@ const Footer = () => {
               Learn More
             </Link>
           </div>
-          <div className="flex flex-col items-start mx-10 w-40 text-white">
+          <div className="flex flex-col items-start  w-40 text-white">
             <h2 className="text-xl  sm:text-2xl font-bold mb-2">Join Us</h2>
             <Link href={"/"} className="text-sm sm:text-base">
               Get Started

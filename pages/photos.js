@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ShowCase } from "../components/showcase/ShowCase";
 import Image from "next/image";
-import programs from "../assets/showcase/program.json";
+import programs from "../assets/images/showcase/program.json";
 import { TeamImages } from "../components/images/TeamImages";
 
 const Photos = () => {
@@ -16,7 +16,7 @@ const Photos = () => {
             <Image
               key={images.id}
               className=" flex sm:h-[480px] sm:w-[800px] gap-6 rounded-3xl px-2"
-              src={require(`../assets/showcase/${images.img_name}.png`)}
+              src={require(`../assets/images/showcase/${images.img_name}.png`)}
               alt="image"
             />
           )),
