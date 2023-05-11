@@ -49,10 +49,10 @@ const About = () => {
           </section>
         </div>
         <div className="bg-yellow-500">
-          <div class="">
-            <div class="sm:flex sm:justify-center sm:items-center mx-auto text-center gap-4 px-4 py-10 ">
-              <div class=" max-w-[410px] bg-white rounded-lg mx-auto py-6 sm:-translate-y-1/2 my-4">
-                <div class="bg-[url('../assets/images/aboutImage/memory2.png')]  h-[220px]  mx-auto bg-no-repeat  bg-top "></div>
+          <div className="">
+            <div className="sm:flex sm:justify-center sm:items-center mx-auto text-center gap-4 px-4 py-10 ">
+              <div className=" max-w-[410px] bg-white rounded-lg mx-auto py-6 sm:-translate-y-1/2 my-4">
+                <div className="bg-[url('../assets/images/aboutImage/memory2.png')]  h-[220px]  mx-auto bg-no-repeat  bg-top "></div>
                 <h3 className="font-poppins font-extrabold text-xl">
                   Children
                 </h3>
@@ -62,8 +62,8 @@ const About = () => {
                   veniam. Harum deleniti iure eum.
                 </p>
               </div>
-              <div class="max-w-[410px] bg-white rounded-lg mx-auto py-6 sm:-translate-y-1/2">
-                <div class="bg-[url('../assets/images/aboutImage/memory4.png')] h-[220px]  mx-auto bg-no-repeat  bg-top "></div>
+              <div className="max-w-[410px] bg-white rounded-lg mx-auto py-6 sm:-translate-y-1/2">
+                <div className="bg-[url('../assets/images/aboutImage/memory4.png')] h-[220px]  mx-auto bg-no-repeat  bg-top "></div>
                 <h3 className="font-poppins font-extrabold text-xl">
                   Just right
                 </h3>
@@ -73,8 +73,8 @@ const About = () => {
                   veniam. Harum deleniti iure eum.
                 </p>
               </div>
-              <div class="max-w-[410px] bg-white rounded-lg mx-auto py-6 sm:-translate-y-1/2 my-4">
-                <div class="bg-[url('../assets/images/aboutImage/memory3.png')]   h-[220px]  mx-auto bg-no-repeat  bg-center "></div>
+              <div className="max-w-[410px] bg-white rounded-lg mx-auto py-6 sm:-translate-y-1/2 my-4">
+                <div className="bg-[url('../assets/images/aboutImage/memory3.png')]   h-[220px]  mx-auto bg-no-repeat  bg-center "></div>
                 <h3 className="font-poppins font-extrabold text-xl">
                   Old fart
                 </h3>
