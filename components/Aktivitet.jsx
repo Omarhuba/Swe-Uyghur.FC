@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import img_1 from "../assets/images/1.png";
-import img_2 from "../assets/images/2.png";
-import img_3 from "../assets/images/3.png";
-import img_4 from "../assets/images/4.png";
-import img_5 from "../assets/images/5.png";
+import img_1 from "../assets/images/aktivitet/1.png";
+import img_2 from "../assets/images/aktivitet/2.png";
+import img_3 from "../assets/images/aktivitet/3.png";
+import img_4 from "../assets/images/aktivitet/4.png";
+import img_5 from "../assets/images/aktivitet/5.png";
 
 export const Aktivitet = () => {
   return (

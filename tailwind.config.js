@@ -11,13 +11,15 @@ module.exports = {
   theme: {
     screens: {
       sm: "640px",
-      // => @media (min-width: 640px) { ... }
-
       lg: "860px",
-      // => @media (min-width: 1024px) { ... }
-
       xl: "1280px",
-      // => @media (min-width: 1280px) { ... }
+    },
+    backgroundSize: {
+      auto: "auto",
+      cover: "cover",
+      contain: "contain",
+      "90%": "90%",
+      150: "150px",
     },
     extend: {
       fontFamily: {

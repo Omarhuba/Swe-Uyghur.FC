@@ -84,7 +84,7 @@ export default function Delatils() {
           {allMessages &&
             allMessages.map((comment) => (
               <div
-                className="bg-white p-4 my-4 border-2 rounded-lg h-full"
+                className="bg-white p-4 my-4 border-2 rounded-lg h-full mx-4"
                 key={comment.time}
               >
                 <div className="flex  items-center gap-2 mb-4">

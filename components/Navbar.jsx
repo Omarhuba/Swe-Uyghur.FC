@@ -4,6 +4,9 @@ import Link from "next/link";
 import { SiTypo3 } from "react-icons/si";
 import { auth } from "../utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+// import logo from "../assets/images/matchday.png";
+import logo from "../assets/logo.png";
+import Image from "next/image";
 import { useState } from "react";
 
 export const Navbar = () => {
@@ -11,10 +14,11 @@ export const Navbar = () => {
   return (
     <nav className="flex justify-between bg-slate-800 hover:bg-slate-950 hover:duration-700 w-full sticky top-0 z-50 opacity-95">
       <Link href={"/"}>
-        <article className="flex justify-center items-center w-10 sm:w-48 gap-2">
-          <h2 className="sm:flex hidden  items-center text-4xl text-white ">
+        <article className="flex justify-center items-center w-18 sm:w-48 gap-2">
+          <h2 className="sm:flex hidden  items-center text-3xl text-white ">
             Swe-UG
           </h2>
+          {/* <Image className="w-16" src={logo} alt="img" priority={true} /> */}
           <SiTypo3 className="text-white text-4xl sm:3xl" />
         </article>
       </Link>
