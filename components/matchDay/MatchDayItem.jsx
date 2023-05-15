@@ -16,7 +16,7 @@ export const MatchDayItem = ({ children }) => {
   console.log(formattedDate);
 
   return (
-    <div className="flex flex-col bg-white shadow shadow-red-700/40 rounded-lg p-4 mx-auto max-w-[25rem] sm:min-w-[35rem] my-4">
+    <div className="flex flex-col  bg-white shadow shadow-red-700/40 rounded-lg p-4  mx-auto max-w-[25rem] sm:min-w-[35rem] my-4">
       <div className="flex justify-center flex-col items-center pb-4">
         <span>
           <img

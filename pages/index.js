@@ -50,7 +50,7 @@ export default function Home() {
           </div>
           {/* <ShowcaseItem  /> */}
           <MatchDay />
-          {/* <Aktivitet /> */}
+          <Aktivitet />
         </div>
       </main>
     </div>
