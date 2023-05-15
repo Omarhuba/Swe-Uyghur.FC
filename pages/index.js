@@ -4,8 +4,11 @@ import Link from "next/link";
 import { BsPlayCircle } from "react-icons/bs";
 import { MatchDay } from "../components/matchDay/MatchDay";
 import { Aktivitet } from "../components/Aktivitet";
+import useMediaQuery from "../hooks/useMediaQuery";
+import img_5 from "../assets/images/home.jpg";
 
 export default function Home() {
+  const isDesktop = useMediaQuery("(min-width: 860px");
   return (
     <div>
       <Head>
@@ -18,13 +21,17 @@ export default function Home() {
         <div>
           <div className=" flex justify-center items-center">
             {/* <video src='/videos/video-1.mp4' autoPlay muted loop/> */}
-            <video
-              className="object-cover w-full max-h-full relative z-0"
-              src="/videos/football.mp4"
-              autoPlay
-              muted
-              loop
-            />
+            {isDesktop ? (
+              <video
+                className="object-cover w-full max-h-full relative z-0"
+                src="/videos/football.mp4"
+                autoPlay
+                muted
+                loop
+              />
+            ) : (
+              <Image src={img_5} alt="image" />
+            )}
             <div className=" absolute flex flex-col justify-center items-center ">
               <h1 className="sm:text-6xl text-xl text-white font-poppins font-bold">
                 Swe-Uyghur .FC
