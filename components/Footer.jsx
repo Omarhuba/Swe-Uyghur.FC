@@ -9,10 +9,10 @@ const Footer = () => {
     <div className=" flex flex-col justify-center items-center p-4 bg-gray-800 ">
       <section className="flex flex-col justify-center items-center text-center text-white mb-4 p-6">
         <h1 className="text-2xl sm:text-4xl sm:py-6 mb-4 font-poppins">
-          Välkommen Till Vår Fotbollsklubb Och Gå Med Oss!
+          Welcome To Our Soccer Club And Join Us!
         </h1>
         <p className="text-xl mb-6 sm:text-2xl font-poppins">
-          Du kan prenumerera när som helst..
+          You can subscribe at any time...
         </p>
         <div className="flex justify-center items-center max-w-3xl">
           <input
@@ -20,13 +20,13 @@ const Footer = () => {
             type="mail"
             placeholder="Type Your Email Here..."
           />
-          <button className="border-2 ml-4 p-2">Prenumerera</button>
+          <button className="border-2 ml-4 p-2">Subscrip</button>
         </div>
       </section>
       <div className="flex justify-center  mt-10 mb-10">
         <div className="grid grid-cols-2 gap-8 xl:flex ">
           <div className="flex flex-col items-start  w-40 text-white">
-            <h2 className="text-xl sm:text-2xl font-bold mb-2">Om oss</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-2">About</h2>
             <Link href={"/"} className="text-sm sm:text-base">
               How it works
             </Link>
@@ -38,7 +38,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col items-start  w-40 text-white">
-            <h2 className="text-xl sm:text-2xl font-bold mb-2">Kontakta oss</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-2">Contact</h2>
             <Link href={"/"} className="text-sm sm:text-base">
               Contact
             </Link>
@@ -50,7 +50,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col items-start  w-40 text-white">
-            <h2 className="text-xl sm:text-2xl font-bold mb-2">Resurser</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-2">Resource</h2>
             <Link href={"/"} className="text-sm sm:text-base">
               Blog
             </Link>
@@ -59,7 +59,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col items-start  w-40 text-white">
-            <h2 className="text-xl  sm:text-2xl font-bold mb-2">Gå med oss</h2>
+            <h2 className="text-xl  sm:text-2xl font-bold mb-2">Join Us</h2>
             <Link href={"/"} className="text-sm sm:text-base">
               Get Started
             </Link>

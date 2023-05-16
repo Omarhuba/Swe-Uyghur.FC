@@ -11,32 +11,32 @@ export const Aktivitet = () => {
     <div>
       <div className="py-4 w-full ">
         <h1 className="font-poppins font-bold text-2xl sm:text-4xl text-center  py-10">
-          Här är vi och våran aktivitet
+          Here we are and our activity...
         </h1>
         <div className="grid grid-cols-2 justify-center py-2 mx-2 lg:flex lg:flex-row ">
           <div className="flex flex-col justify-center items-center">
             <Image className="w-56" src={img_1} alt="img" />
-            <span className="text-xl py-2 font-medium sm:text-2xl">Ledare</span>
+            <span className="text-xl py-2 font-medium sm:text-2xl">Leader</span>
           </div>
           <div className="flex flex-col justify-center items-center">
             <Image className="w-56" src={img_2} alt="img" />
-            <span className="text-xl py-2 font-medium sm:text-2xl">Aktiva</span>
+            <span className="text-xl py-2 font-medium sm:text-2xl">Active</span>
           </div>
           <div className="flex flex-col justify-center items-center">
             <Image className="w-56" src={img_3} alt="img" />
             <span className="text-xl py-2 font-medium sm:text-2xl">
-              Föräldrar
+              Parents
             </span>
           </div>
           <div className="flex flex-col justify-center items-center">
             <Image className="w-56" src={img_4} alt="img" />
             <span className="text-xl py-2 font-medium sm:text-2xl">
-              Suportrar
+              Supports
             </span>
           </div>
-          <div className="flex flex-col justify-center items-center">
-            <Image className="w-56 lg:h-[234px]" src={img_5} alt="img" />
-            <span className="text-xl py-2 font-medium sm:text-2xl">
+          <div className="flex flex-col justify-center items-center ">
+            <Image className="w-56 " src={img_5} alt="img" />
+            <span className="text-xl mt-9 py-2 font-medium sm:text-2xl">
               Styrelse/Kansili
             </span>
           </div>

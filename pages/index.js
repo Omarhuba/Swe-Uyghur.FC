@@ -15,7 +15,7 @@ export default function Home() {
         <title>Swe-Uyghur .FC</title>
         <meta name="description" content="Sverige Uyghur fottball team." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
       </Head>
       <main>
         <div>

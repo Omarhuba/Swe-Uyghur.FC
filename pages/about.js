@@ -20,7 +20,7 @@ const About = () => {
         <div className="  gap-6 bg-slate-500 h-full lg:min-h-[80vh] lg:flex lg:w-full lg:justify-evenly ">
           <section className="">
             <h1 className="text-center font-poppins text-2xl py-4 text-white lg:text-4xl lg:py-8">
-              Swe-Uyghur.FC Klubb
+              Swe-Uyghur.FC
             </h1>
             <p className="text-sm px-8 break-all sm:text-base lg:max-w-1/3 text-slate-200">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam

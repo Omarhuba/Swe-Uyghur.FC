@@ -23,18 +23,18 @@ export const Navbar = () => {
           <SiTypo3 className="text-white text-4xl sm:3xl" />
         </article>
       </Link>
-      <ul className="flex items-center gap-2  ">
+      <ul className="flex items-center gap-3  ">
         <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-white hover:text-cyan-400 hover:duration-700">
-          <Link href="/news">Nyheter</Link>
+          <Link href="/posts">Posts</Link>
         </li>
         <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-white hover:text-cyan-400 hover:duration-700">
-          <Link href="/posts">Inlägg</Link>
+          <Link href="/news">News</Link>
         </li>
         <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-white hover:text-cyan-400 hover:duration-700">
-          <Link href="/photos">Bilder</Link>
+          <Link href="/photos">Photos</Link>
         </li>
         <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-white hover:text-cyan-400 hover:duration-700">
-          <Link href="/about">Om Oss</Link>
+          <Link href="/about">About</Link>
         </li>
         {user && (
           <>
@@ -55,8 +55,7 @@ export const Navbar = () => {
             href="/auth/login"
             className="flex  flex-col items-center justify-end text-cyan-400  font-medium"
           >
-            <GoSignIn className="w-10 h-7" />
-            <p className="text-sm">Login</p>
+            <GoSignIn className="w-8 h-6 lg:w-12 lg:h-9" />
           </Link>
         )}
       </ul>
