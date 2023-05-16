@@ -10,11 +10,21 @@ export const MatchDay = () => {
 
   //* get matchday data
   useEffect(() => {
-    const fetchDataAsync = async () => {
-      const result = await fetchMachDayData();
-      await setGetData(result);
+    const myData = async () => {
+      const url = "/api/matchDay";
+      const options = {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        setGetData(result);
+      } catch (e) {}
     };
-    fetchDataAsync();
+    myData();
   }, []);
 
   if (!getData) {

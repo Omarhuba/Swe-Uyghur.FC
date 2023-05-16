@@ -15,7 +15,7 @@ export const Modal = ({ selectedImage, setSelectedImage }) => {
         className=""
         src={selectedImage}
         alt="selected image"
-        initial={{ y: "-100vh" }}
+        initial={{ y: "-80vh" }}
         animate={{ y: "0" }}
       />
     </motion.div>

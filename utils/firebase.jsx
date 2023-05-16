@@ -5,6 +5,11 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
+// https://firebase.google.com/docs/web/setup#available-libraries
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -31,6 +36,10 @@ export const storage = getStorage(app);
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
+//! annat sätt
+// import * as firebase from "firebase/app";
+// import "firebase/storage";
+// import "firebase/firestore";
 //! annat sätt
 // firebase.initializeApp(firebaseConfig);
 // const projectStorage = firebase.storage();
