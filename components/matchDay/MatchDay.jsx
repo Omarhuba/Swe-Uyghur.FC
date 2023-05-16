@@ -16,6 +16,8 @@ export const MatchDay = () => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
+          "X-Auth-Token": process.env.X_AUTH_TOKEN,
+
         },
       };
       try {
