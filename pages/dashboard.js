@@ -80,25 +80,25 @@ const Dashboard = () => {
                   href="/"
                   className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  To Home
+                  Hem
                 </Link>
                 <Link
                   href="/photos"
                   className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  To Photos
+                  Bilder
                 </Link>
                 <Link
                   href="/posts"
                   className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  To Posts
+                  Inlägg
                 </Link>
                 <Link
                   href="/createpost"
                   className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  Create a Post
+                  Skapa Inlägg
                 </Link>
               </div>
               <div className="py-6 px-10  flex justify-end w-full">
@@ -106,7 +106,7 @@ const Dashboard = () => {
                   onClick={() => auth.signOut()}
                   className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  Logout
+                  Logga ut
                 </button>
               </div>
             </div>
@@ -115,7 +115,7 @@ const Dashboard = () => {
       )}
       ;
       <div className="h-full  py-6 min-h-full">
-        <h1 className="text-center text-3xl ">Your Post</h1>
+        <h1 className="text-center text-3xl ">Din Inlägg</h1>
         <div>
           {posts.map((post) => {
             return (
@@ -128,12 +128,12 @@ const Dashboard = () => {
                     className="flex justify-center items-center gap-1 text-red-600 text-sm"
                   >
                     <BsTrash2Fill />
-                    Delete
+                    Ta bort
                   </button>
                   <Link href={{ pathname: "/createpost", query: post }}>
                     <button className="flex justify-center items-center gap-1 text-cyan-600 text-sm">
                       <AiFillEdit />
-                      Edit
+                      Ändra
                     </button>
                   </Link>
                 </div>
