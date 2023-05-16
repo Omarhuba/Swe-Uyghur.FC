@@ -22,17 +22,17 @@ export const Navbar = () => {
           <SiTypo3 className="text-white text-4xl sm:3xl" />
         </article>
       </Link>
-      <ul className="flex items-center gap-3">
-        <li className=" text-md sm:text-xl sm:px-4 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
+      <ul className="flex items-center gap-2  ">
+        <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
           <Link href="/news">Nyheter</Link>
         </li>
-        <li className=" text-md sm:text-xl sm:px-4 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
+        <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
           <Link href="/posts">Inlägg</Link>
         </li>
-        <li className=" text-md sm:text-xl sm:px-4 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
+        <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
           <Link href="/photos">Bilder</Link>
         </li>
-        <li className=" text-md sm:text-xl sm:px-4 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
+        <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
           <Link href="/about">Om Oss</Link>
         </li>
         {user && (
@@ -52,7 +52,7 @@ export const Navbar = () => {
         {!user && (
           <Link
             href={"/auth/login"}
-            className="py-1 px-4 bg-cyan-600 text-white rounded-xl font-medium"
+            className="py-1 px-2 bg-cyan-600 text-white rounded-xl font-medium"
           >
             Login
           </Link>
