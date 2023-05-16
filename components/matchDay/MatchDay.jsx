@@ -3,18 +3,27 @@ import React, { useState, useEffect } from "react";
 import { MatchDayItem } from "./MatchDayItem.jsx";
 import matchday from "../../assets/images/matchday.png";
 import Image from "next/image";
-import fetchMachDayData from "../../pages/api/fetchData.js";
 
 export const MatchDay = () => {
   const [getData, setGetData] = useState(null);
 
   //* get matchday data
   useEffect(() => {
-    const fetchDataAsync = async () => {
-      const result = await fetchMachDayData();
-      await setGetData(result);
+    const myData = async () => {
+      const url = "/api/matchDay";
+      const options = {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        setGetData(result);
+      } catch (e) {}
     };
-    fetchDataAsync();
+    myData();
   }, []);
 
   if (!getData) {

@@ -24,16 +24,16 @@ export const Navbar = () => {
       </Link>
       <ul className="flex items-center gap-3">
         <li className=" text-md sm:text-xl sm:px-4 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
-          <Link href="/">Home</Link>
+          <Link href="/news">Nyheter</Link>
         </li>
         <li className=" text-md sm:text-xl sm:px-4 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
-          <Link href="/photos">Photos</Link>
+          <Link href="/posts">Inlägg</Link>
         </li>
         <li className=" text-md sm:text-xl sm:px-4 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
-          <Link href="/posts">Posts</Link>
+          <Link href="/photos">Bilder</Link>
         </li>
         <li className=" text-md sm:text-xl sm:px-4 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
-          <Link href="/about">About</Link>
+          <Link href="/about">Om Oss</Link>
         </li>
         {user && (
           <>

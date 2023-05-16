@@ -18,7 +18,6 @@ export default function Delatils() {
   const routeData = router.query;
   const [messages, setMessages] = useState("");
   const [allMessages, setAllMessages] = useState([]);
-  console.log("allMessages", allMessages);
 
   //! submit comments
   const submitComments = async () => {
