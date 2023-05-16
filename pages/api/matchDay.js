@@ -3,7 +3,7 @@ export default async function getMachDayData(req, res) {
   const options = {
     method: "GET",
     headers: {
-      "X-Auth-Token": process.env.X_AUTH_TOKEN,
+      "X-Auth-Token": process.env.NEXT_PUBLIC_X_AUTH_TOKEN,
       "Content-Type": "	application/json;charset=UTF-8",
     },
   };
