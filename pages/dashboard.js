@@ -80,25 +80,25 @@ const Dashboard = () => {
                   href="/"
                   className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  Hem
+                  To Home
                 </Link>
                 <Link
                   href="/photos"
                   className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  Bilder
+                  To
                 </Link>
                 <Link
                   href="/posts"
                   className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  Inlägg
+                  To Posts
                 </Link>
                 <Link
                   href="/createpost"
                   className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  Skapa Inlägg
+                  Create A Post
                 </Link>
               </div>
               <div className="py-6 px-10  flex justify-end w-full">

@@ -52,7 +52,7 @@ export const MatchDay = () => {
           </h3>
         </div>
       </div>
-      <div className="lg:grid grid-cols-2 gap-4 min-w-72 mb-8 mx-2">
+      <div className="sm:flex sm:flex-wrap gap-4  mb-8 mx-2">
         {getData.matches.map((children) => (
           <MatchDayItem className="" key={children.id}>
             {children}
