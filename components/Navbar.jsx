@@ -52,8 +52,9 @@ export const Navbar = () => {
         )}
         {!user && (
           <Link
-            href={"/auth/login"}
+
             className="flex  flex-col items-center justify-end text-cyan-400  font-medium"
+
           >
             <GoSignIn className="w-10 h-7" />
             <p className="text-sm">Login</p>
