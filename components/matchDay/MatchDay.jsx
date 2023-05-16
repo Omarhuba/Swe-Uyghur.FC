@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { MatchDayItem } from "./MatchDayItem.jsx";
 import matchday from "../../assets/images/matchday.png";
 import Image from "next/image";
+import fetchMachDayData from "../../pages/api/fetchData.js";
 
 export const MatchDay = () => {
   const [getData, setGetData] = useState(null);
