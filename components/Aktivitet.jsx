@@ -13,29 +13,29 @@ export const Aktivitet = () => {
         <h1 className="font-poppins font-bold text-2xl sm:text-4xl text-center  py-10">
           Här är vi och våran aktivitet
         </h1>
-        <div className="flex flex-col justify-center py-4 lg:flex lg:flex-row ">
+        <div className="grid grid-cols-2 justify-center py-2 mx-2 lg:flex lg:flex-row ">
           <div className="flex flex-col justify-center items-center">
-            <Image className="w-64" src={img_1} alt="img" />
+            <Image className="w-56" src={img_1} alt="img" />
             <span className="text-xl py-2 font-medium sm:text-2xl">Ledare</span>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <Image className="w-64" src={img_2} alt="img" />
+            <Image className="w-56" src={img_2} alt="img" />
             <span className="text-xl py-2 font-medium sm:text-2xl">Aktiva</span>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <Image className="w-64" src={img_3} alt="img" />
+            <Image className="w-56" src={img_3} alt="img" />
             <span className="text-xl py-2 font-medium sm:text-2xl">
               Föräldrar
             </span>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <Image className="w-64" src={img_4} alt="img" />
+            <Image className="w-56" src={img_4} alt="img" />
             <span className="text-xl py-2 font-medium sm:text-2xl">
               Suportrar
             </span>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <Image className="w-64 h-[234px]" src={img_5} alt="img" />
+            <Image className="w-56 lg:h-[234px]" src={img_5} alt="img" />
             <span className="text-xl py-2 font-medium sm:text-2xl">
               Styrelse/Kansili
             </span>
