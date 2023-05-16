@@ -2,6 +2,7 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 import { SiTypo3 } from "react-icons/si";
+import { GoSignIn } from "react-icons/go";
 import { auth } from "../utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 // import logo from "../assets/images/matchday.png";
@@ -23,16 +24,16 @@ export const Navbar = () => {
         </article>
       </Link>
       <ul className="flex items-center gap-2  ">
-        <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
+        <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-white hover:text-cyan-400 hover:duration-700">
           <Link href="/news">Nyheter</Link>
         </li>
-        <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
+        <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-white hover:text-cyan-400 hover:duration-700">
           <Link href="/posts">Inlägg</Link>
         </li>
-        <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
+        <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-white hover:text-cyan-400 hover:duration-700">
           <Link href="/photos">Bilder</Link>
         </li>
-        <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-gray-500 hover:text-white hover:duration-700">
+        <li className=" text-md sm:text-xl lg:px-3 text-red-600-700 text-white hover:text-cyan-400 hover:duration-700">
           <Link href="/about">Om Oss</Link>
         </li>
         {user && (
@@ -40,7 +41,7 @@ export const Navbar = () => {
             <div className="flex">
               <Link href="/dashboard">
                 <img
-                  className="sm:w-14 w-8 rounded-full cursor-pointer sm:ml-6 "
+                  className="lg:w-14 w-8 rounded-full cursor-pointer lg:mx-5 "
                   src={user.photoURL}
                   alt="img"
                 />
@@ -52,9 +53,10 @@ export const Navbar = () => {
         {!user && (
           <Link
             href={"/auth/login"}
-            className="py-1 px-2 bg-cyan-600 text-white rounded-xl font-medium"
+            className="flex  flex-col items-center justify-end text-cyan-400  font-medium"
           >
-            Login
+            <GoSignIn className="w-10 h-7" />
+            <p className="text-sm">Login</p>
           </Link>
         )}
       </ul>
