@@ -20,7 +20,7 @@ const Footer = () => {
             type="mail"
             placeholder="Type Your Email Here..."
           />
-          <button className="border-2 ml-4 p-2">Subscrip</button>
+          <button className="border-2 ml-4 p-2">Prenumerera</button>
         </div>
       </section>
       <div className="flex justify-center  mt-10 mb-10">
@@ -59,7 +59,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col items-start  w-40 text-white">
-            <h2 className="text-xl  sm:text-2xl font-bold mb-2">Join Us</h2>
+            <h2 className="text-xl  sm:text-2xl font-bold mb-2">Gå med oss</h2>
             <Link href={"/"} className="text-sm sm:text-base">
               Get Started
             </Link>
