@@ -18,13 +18,9 @@ const About = () => {
       </div>
       <div className="w-full h-full">
         <div className="  gap-6 bg-slate-500 h-full lg:min-h-[80vh] lg:flex lg:w-full lg:justify-evenly ">
-          <section className="">
+          <section className="flex flex-col">
             <h1 className="text-center font-poppins text-2xl py-4 text-white lg:text-4xl lg:py-8">
-<<<<<<< HEAD
-              Swe-Uyghur.FC Klubb
-=======
               Swe-Uyghur.FC
->>>>>>> main
             </h1>
             <p className="text-sm px-8 break-all sm:text-base lg:max-w-1/3 text-slate-200">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
@@ -34,11 +30,11 @@ const About = () => {
               aliquid dolorum quis dolores quam culpa rerum accusantium non.
               Dolorem repudiandae aut provident repellendus,
             </p>
-            <button className="m-8 p-2 lg:m-8 lg:p-3 rounded-md text-sm text-black bg-cyan-400 hover:bg-cyan-600 hover:text-white hover: duration-700">
+            <button className="m-8 p-2 max-w-40 lg:m-8 lg:p-3 rounded-md text-sm text-black bg-cyan-400 hover:bg-cyan-600 hover:text-white hover: duration-700">
               LÄS MER
             </button>
           </section>
-          <section className="max-w-[20rem] p-4 mx-auto lg:min-w-[20rem] lg:mx-10 lg:my-6">
+          <section className="max-w-[20rem] p-4 mx-auto lg:min-w-[20rem] lg:mr-10 lg:my-24">
             <Image
               src={meddle}
               className="rounded-2xl flex  justify-center items-center  "

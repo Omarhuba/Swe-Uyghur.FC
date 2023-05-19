@@ -80,19 +80,19 @@ const Dashboard = () => {
                   href="/"
                   className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  To Home
+                  Home
                 </Link>
                 <Link
                   href="/photos"
                   className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  To
+                  Photos
                 </Link>
                 <Link
                   href="/posts"
                   className="flex justify-center items-center px-5 py-3 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  To Posts
+                  Posts
                 </Link>
                 <Link
                   href="/createpost"

@@ -36,7 +36,7 @@ export const Aktivitet = () => {
           </div>
           <div className="flex flex-col justify-center items-center ">
             <Image className="w-56 " src={img_5} alt="img" />
-            <span className="text-xl mt-9 py-2 font-medium sm:text-2xl">
+            <span className="text-xl lg:mt-9  py-2 font-medium sm:text-2xl">
               Styrelse/Kansili
             </span>
           </div>
