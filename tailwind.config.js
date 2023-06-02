@@ -25,6 +25,9 @@ module.exports = {
       fontFamily: {
         poppins: "Poppins",
       },
+      gridTemplateColumns: {
+        fluid: "repeat(16, minmax(10rem, 1fr))",
+      },
       minWidth: {
         1: pxToRem(4),
         2: pxToRem(8),

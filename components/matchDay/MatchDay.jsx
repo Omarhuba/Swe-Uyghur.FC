@@ -4,6 +4,7 @@ import { MatchDayItem } from "./MatchDayItem.jsx";
 import matchday from "../../assets/images/matchday.png";
 import Image from "next/image";
 import fetchMachDayData from "../../pages/api/fetchData.js";
+import { Loading } from "../../utils/Loading.jsx";
 
 export const MatchDay = () => {
   const [getData, setGetData] = useState(null);
@@ -21,6 +22,7 @@ export const MatchDay = () => {
       };
       try {
         const response = await fetch(url, options);
+        await new Promise((resolve) => setTimeout(resolve, 3000));
         const result = await response.json();
         setGetData(result);
       } catch (e) {}
@@ -29,7 +31,11 @@ export const MatchDay = () => {
   }, []);
 
   if (!getData) {
-    return <div>Loading.....</div>;
+    return (
+      <div className="min-h-[15rem] flex justify-center items-center  bg-slate-700 ">
+        <Loading />
+      </div>
+    );
   }
   return (
     <div className="bg-gray-700 py-1  ">

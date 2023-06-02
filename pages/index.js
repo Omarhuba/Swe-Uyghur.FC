@@ -6,6 +6,8 @@ import { MatchDay } from "../components/matchDay/MatchDay";
 import { Aktivitet } from "../components/Aktivitet";
 import useMediaQuery from "../hooks/useMediaQuery";
 import img_5 from "../assets/images/2.jpg";
+import { Suspense } from "react";
+import { Loading } from "../utils/Loading";
 
 export default function Home() {
   const isDesktop = useMediaQuery("(min-width: 860px");
@@ -57,7 +59,9 @@ export default function Home() {
           </div>
           {/* <ShowcaseItem  /> */}
           <MatchDay />
-          <Aktivitet />
+          <Suspense fallback={<div>Loading....</div>}>
+            <Aktivitet />
+          </Suspense>
         </div>
       </main>
     </div>
